@@ -1,5 +1,5 @@
 # tonadota.github.io
 
-＃ Tテトリス
+# Tテトリス
 
 まだブロックをcanvas上にZミノで描画しただけです
