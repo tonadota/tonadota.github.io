@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="can"></canvas>
+
+<script>
+'use strict';
+let can = document.getElementById('can');
+let con = can.getContext("2d");
+const TETRO_TYPES = [
+    [],
+    [
+        [0,0,0,0],
+        [1,1,1,1],
+        [0,0,0,0],
+        [0,0,0,0]
+    ],
+    [
+        [0,0,1,0],
+        [0,0,1,0],
+        [0,1,1,0],
+        [0,0,0,0]
+    ],
+    [
+        [0,1,0,0],
+        [0,1,0,0],
+        [0,1,1,0],
+        [0,0,0,0]
+    ],
+    [
+        [0,0,0,0],
+        [0,1,0,0],
+        [1,1,1,0],
+        [0,0,0,0]
+    ],
+    [
+        [0,0,0,0],
+        [0,1,1,0],
+        [0,1,1,0],
+        [0,0,0,0]
+    ],
+    [
+        [0,0,0,0],
+        [1,1,0,0],
+        [0,1,1,0],
+        [0,0,0,0]
+    ],
+    [
+        [0,0,0,0],
+        [0,1,1,0],
+        [1,1,0,0],
+        [0,0,0,0]
+    ],
+];
+
+const TETRO_COLORS = [
+    "#000", 
+    "#000",
+    "#000",
+    "#000",
+    "#000",
+    "#000",
+    "#f33",
+    "#000"
+];
+
+const TETRO_SIZE = 4;
+const BLOCK_SIZE = 30;
+
+let tetro = TETRO_TYPES[6];
+
+for(let y=0; y<TETRO_SIZE; y++){
+    for(let x=0; x<TETRO_SIZE; x++){
+        if(tetro[y][x] == 1){
+            let printx = x * BLOCK_SIZE;
+            let printy = y * BLOCK_SIZE;
+
+            con.fillStyle = TETRO_COLORS[6];
+            con.fillRect(printx,printy,BLOCK_SIZE,BLOCK_SIZE);
+            con.strokeStyle = "black";
+            con.strokeRect(printx, printy, BLOCK_SIZE, BLOCK_SIZE);
+        }
+    }
+}
+
+document.onkeydown = function(e) {
+    switch(e.keydown){
+        case 37:  //左
+            //
+            break;
+        case 38:  //上
+            //
+            break;
+        case 39:  //右
+            //
+            break;
+        case 40:  //下
+            //
+            break;
+        case 32:
+            break;
+    }
+}
+
+
+</script>
+</body>
+</html>
